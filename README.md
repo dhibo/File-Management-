@@ -22,17 +22,14 @@ Here's a breakdown of how the script works:
         If the REGROUP option is selected, the script proceeds to regroup files in a specific directory. It extracts the file extensions from the directory path using the find command and awk. Then, it creates directories for each unique file extension and moves files with the corresponding extension to the respective directories using the find and mv commands.
   </li>
     <li>
-      
     If the AUTODELETE option is selected, the script automatically deletes log files in the /var/log directory using sudo rm.
   </li>
   
    <li>
-     
     If the DELETEUNMODIFIED option is selected, the script finds directories in the specified directory path that were last modified more than 30 days ago using the find command with the -mtime option. It presents a list dialog box using zenity with checkboxes for each directory, allowing the user to select directories to delete.
   </li>
    
    <li>
-     
     After the user selects directories to delete, the script displays a confirmation dialog using zenity to confirm the deletion. If the user confirms, the selected directories are deleted using the rm -rf command.
   </li>
 </ul>
