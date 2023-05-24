@@ -34,5 +34,28 @@ Here's a breakdown of how the script works:
   </li>
 </ul>
 
+<h3> Run script as service </h3>
+<ol>
+  <li>Create a service unit "myservice.service"
+  </li>
+    <li>Create timer unit "myservice.timer"
+  </li>
+    <li>Move file to the following path : sudo mv myservice.service/etc/systemd/system/ 
+
+  </li>
+    <li>Move file to the following path : sudo mv myservice.timer/etc/systemd/system/
+  </li>
+    <li>Set the correct permissions : sudo chmod 644 /etc/systemd/system/file-management.service
+sudo chmod 644 /etc/systemd/system/file-management.timer
+  <li>
+  <li>
+    Reload the systemd daemon to pick up the new units : sudo systemctl daemon-reload
+  </li>
+  <li>Start the timer: sudo systemctl start file-management.timer
+  </li>
+  <li>
+  Enable the timer to ensure it starts automatically on boot : sudo systemctl enable file-management.timer
+</li>
+</ol>
 
 
