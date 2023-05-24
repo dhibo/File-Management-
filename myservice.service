@@ -1,0 +1,9 @@
+[Unit]
+Description=Personnal Service
+After=network.target
+
+[Service]
+ExecStart=/home/dhib/org.sh
+
+[Install]
+WantedBy=default.target

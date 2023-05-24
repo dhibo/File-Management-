@@ -1,0 +1,10 @@
+[Unit]
+Description = Run My Service Script
+
+[Timer]
+OnBootSec=10min
+OnUnitActiveSec=1d
+Unit=myservice.service
+
+[Install]
+WantedBy=default.target
